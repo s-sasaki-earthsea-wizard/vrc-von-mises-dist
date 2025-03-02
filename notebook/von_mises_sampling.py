@@ -59,14 +59,13 @@ class VonMisesDistAnalyzer:
         plt.show()
 
     @staticmethod
-    def display_polar_histogaram(samples):
+    def display_polar_histogaram(samples, N=60):
         """
         サンプルの極座標ヒストグラムを表示
 
         Args:
             samples (numpy.ndarray): 表示するサンプル
         """
-        N = 60
         bottom = 4
         max_height = 4
         
@@ -96,78 +95,14 @@ class VonMisesDistAnalyzer:
         plt.show()
         
     @staticmethod
-    def compare_kappa_values(mu=0.0, kappa_values=[0.5, 2.0, 5.0, 10.0]):
-        """
-        異なる集中度パラメータでのフォン=ミーゼス分布を比較する関数
-        
-        Args:
-            mu (float, optional): 平均方向（ラジアン単位、-π から π の範囲）. Defaults to 0.0.
-            kappa_values (list, optional): 比較する集中度パラメータのリスト. Defaults to [0.5, 2.0, 5.0, 10.0].
-        """
-        colors = ['blue', 'green', 'red', 'purple', 'orange', 'brown', 'pink', 'gray']
-        
-        plt.figure(figsize=(12, 8))
-        x = np.linspace(-np.pi, np.pi, 1000)
-        
-        for i, k in enumerate(kappa_values):
-            color = colors[i % len(colors)]
-            plt.plot(x, stats.vonmises.pdf(x, k, loc=mu), color=color, lw=2, 
-                    label=f'κ={k}')
-        
-        plt.title(f'異なる集中度パラメータでのフォン=ミーゼス分布 (μ={mu})')
-        plt.xlabel('角度 (ラジアン)')
-        plt.ylabel('確率密度')
-        plt.xlim(-np.pi, np.pi)
-        plt.legend()
-        plt.grid(True, alpha=0.3)
-        plt.show()
+    def calculate_mean_concentration(samples):
+        x = np.cos(samples)
+        y = np.sin(samples)
+        mean_x = np.mean(x)
+        mean_y = np.mean(y)
+        mean_direction = np.arctan2(mean_y, mean_x)
+        mean_direction_deg = mean_direction * 180 / np.pi
 
-    @staticmethod
-    def compare_mu_values(mu_values=[-np.pi/2, 0, np.pi/4, np.pi/2], kappa=5.0):
-        """
-        異なる平均方向でのフォン=ミーゼス分布を比較する関数
-        
-        Args:
-            mu_values (list, optional): 比較する平均方向のリスト. Defaults to [-np.pi/2, 0, np.pi/4, np.pi/2].
-            kappa (float, optional): 集中度パラメータ. Defaults to 5.0.
-        """
-        colors = ['blue', 'green', 'red', 'purple', 'orange', 'brown', 'pink', 'gray']
-        
-        plt.figure(figsize=(12, 8))
-        x = np.linspace(-np.pi, np.pi, 1000)
-        
-        for i, m in enumerate(mu_values):
-            color = colors[i % len(colors)]
-            plt.plot(x, stats.vonmises.pdf(x, kappa, loc=m), color=color, lw=2, 
-                    label=f'μ={m:.2f}')
-        
-        plt.title(f'異なる平均方向でのフォン=ミーゼス分布 (κ={kappa})')
-        plt.xlabel('角度 (ラジアン)')
-        plt.ylabel('確率密度')
-        plt.xlim(-np.pi, np.pi)
-        plt.legend()
-        plt.grid(True, alpha=0.3)
-        plt.show()
+        kappa, _, _ = stats.vonmises.fit(samples)
+        return mean_direction_deg, kappa
 
-if __name__ == "__main__":
-    # パラメータの設定
-    mu = 0.0  # 平均方向（ラジアン）
-    kappa = 5.0  # 集中度パラメータ
-    n_samples = 100  # サンプル数
-    
-    # サンプル生成と可視化
-    samples = VonMisesDistAnalyzer.generate_von_mises_samples(mu=mu, kappa=kappa, n_samples=n_samples)
-    print(f"生成したサンプル（最初の10個）: {samples[:10]}")
-    
-    # 異なる集中度パラメータでの比較
-    VonMisesDistAnalyzer.compare_kappa_values(mu=mu)
-    
-    # 異なる平均方向での比較
-    VonMisesDistAnalyzer.compare_mu_values(kappa=kappa)
-    
-    # パラメータを変更して再度サンプル生成
-    print("\n異なるパラメータでのサンプル生成:")
-    mu = np.pi/4  # 平均方向を変更
-    kappa = 8.0   # 集中度を変更
-    samples = VonMisesDistAnalyzer.generate_von_mises_samples(mu=mu, kappa=kappa, n_samples=n_samples)
-    print(f"生成したサンプル（最初の10個）: {samples[:10]}")

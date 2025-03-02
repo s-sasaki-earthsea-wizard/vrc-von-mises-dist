@@ -54,22 +54,22 @@
 .col-box-left {
     background-color: #f8f9fa;
     flex: 1;
-    padding: 10px;
+    padding: 0px;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     border: 2px solid #0084ff;
-    margin-left: -5%;
+    margin-left: 0%;
     font-size: 0.9em;
 }
 
 .col-box-right {
     background-color: #f8f9fa;
     flex: 1;
-    padding: 10px;
+    padding: 0px;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     border: 2px solid #0084ff;
-    margin-right: -5%;
+    margin-right: 0%;
     font-size: 0.9em;
 }
 

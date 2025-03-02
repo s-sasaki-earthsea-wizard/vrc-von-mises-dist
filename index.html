@@ -127,12 +127,71 @@ $$
 
 ### 2024年6月と12月の風向分布
 
-<!--TODO: Create wind direction polar histogram-->
+<div class="container">
+
+<div class="col-left">
+
+<img src="assets/images/wind_direction_Jun.png" height="350px">
+
+6月の日別最頻風向分布
+
+</div>
+
+<div class="col-right">
+
+<img src="assets/images/wind_direction_Dec.png" height="350px">
+
+12月の日別最頻風向分布
+	
+</div>
+
+</div>
 
 <div class="highlight-box">
 
-* 北西方向から風が吹く頻度が12月の方が高い
+* 西方向から風が吹く頻度が12月の方が高い
   * 本来ならより詳細な検討が必要だが割愛
+
+</div>
+
+---
+
+### 風向のパラメタライズ
+
+<div class="simple-box">
+
+* 風向がフォン=ミーゼス分布に従うと仮定し、6月と12月の風向の平均と集中度を推定
+
+</div>
+
+<br>
+
+<div class="container">
+
+<div class="col-box-left">
+
+* 6月
+  * 平均: $\mu \simeq 242^\circ$
+  * 集中度: $\kappa \simeq 0.46$
+
+</div>
+
+<div class="col-box-right">
+
+* 12月
+  * 平均: $\mu \simeq 170^\circ$
+  * 集中度: $\kappa \simeq 2.40$
+
+</div>
+
+</div>
+
+<br>
+
+<div class="highlight-box">
+
+* 6月は集中度が低く各方向に分散
+* 12月は集中度が高く、西方向からの風の頻度が高い
 
 </div>
 
