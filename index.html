@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>フォン=ミーゼス分布が解き明かす図形の特徴　〜データサイエンスの幾何学への応用〜</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -24,7 +24,7 @@
 			<div class="slides">
 				<section data-markdown data-separator="---">
 					<textarea data-template>
-						
+
 ## フォン=ミーゼス分布が解き明かす図形の特徴
 ### 〜データサイエンスの幾何学への応用〜
 
@@ -56,6 +56,61 @@
 
 ---
 
+### ハイライト
+
+<div class="simple-box">
+
+* フォン=ミーゼス分布は「方向の分布」を表す分布関数である
+* 重要な応用例を数多く持つ
+  * 大きさだけではなく方向を持つ量(ベクトル)の分析
+    * 風向や図形の法線分布など
+* **今日は基礎的なコンセプトとオープンデータを使った分析例を示します！**
+
+</div>
+
+---
+
+### 簡単な例
+
+<img src="assets/images/arrows-distribution.svg" height="300px">
+
+<div class="highlight-box">
+
+* 平均すれば右を向いているが、ひとつひとつのサンプルの向きは揺らぐ
+* 方向の分布を表す分布関数とそれを特徴付けるパラメータは？
+
+</div>
+
+---
+
+### フォン=ミーゼス分布
+
+$$
+f(\theta) = \frac{\exp(\kappa \cos(\theta - \mu))}{2\pi I_0(\kappa)}
+$$
+
+<div class="highlight-box">
+
+* 言うなれば2次元のベクトルの向きの正規分布
+  * $\mu$: 平均
+  * $\kappa$: 集中度
+
+</div>
+
+---
+
+### フォン=ミーゼス分布がなぜ必要？
+
+<!-- TODO: Create polar histogram-->
+
+<div class="highlight-box">
+
+* 角度は周期性があるのでそれを考慮した分布関数が必要
+* 連続量と同等に扱うと平均などの解釈に不都合
+
+</div>
+
+
 					</textarea>
 				</section>
 			</div>
@@ -73,7 +128,7 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
 			});
 		</script>
 	</body>
