@@ -15,7 +15,7 @@
   <!-- 平均方向を示す大きな矢印 -->
   <g transform="translate(300, 250)">
     <line x1="0" y1="0" x2="80" y2="0" stroke="#E74C3C" stroke-width="3"/>
-    <polygon points="80,0 70,-6 70,6" fill="#E74C3C"/>
+    <polygon points="0,0 10,-6 10,6" fill="#E74C3C"/>
     <text x="90" y="5" font-family="Arial, sans-serif" font-size="14" fill="#E74C3C">平均方向</text>
   </g>
   
