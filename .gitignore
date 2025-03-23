@@ -13,3 +13,21 @@ node_modules/
 # Python
 __pycache__
 .python-version
+
+# Point Cloud Data
+*.ply
+*.obj
+*.pcd
+*.las
+*.lasx
+*.laszip
+*.laszipx
+*.laz
+
+# Compressed files
+*.zip
+*.tar
+*.gz
+*.bz2
+*.rar
+*.7z

@@ -15,7 +15,7 @@
   <!-- 平均方向を示す大きな矢印 -->
   <g transform="translate(300, 250)">
     <line x1="0" y1="0" x2="80" y2="0" stroke="#E74C3C" stroke-width="3"/>
-    <polygon points="0,0 10,-6 10,6" fill="#E74C3C"/>
+    <polygon points="85, 0 75, -6 75, 6" fill="#E74C3C"/>
     <text x="90" y="5" font-family="Arial, sans-serif" font-size="14" fill="#E74C3C">平均方向</text>
   </g>
   
@@ -23,13 +23,13 @@
   <!-- 矢印1: やや右上向き -->
   <g transform="translate(60, 75)">
     <line x1="0" y1="0" x2="40" y2="-15" stroke="#3498DB" stroke-width="2"/>
-    <polygon points="40,-15 30,-18 40,10" fill="#3498DB"/>
+    <polygon points="44,-16 30,-18 35,-6" fill="#3498DB"/>
   </g>
   
   <!-- 矢印2: ほぼ右向き -->
   <g transform="translate(180, 75)">
     <line x1="0" y1="0" x2="45" y2="-5" stroke="#3498DB" stroke-width="2"/>
-    <polygon points="45,-5 35,-8 35,0" fill="#3498DB"/>
+    <polygon points="50,-5 40,-10 40,0" fill="#3498DB"/>
   </g>
   
   <!-- 矢印3: 完全に右向き (平均方向) -->
@@ -41,44 +41,44 @@
   <!-- 矢印4: やや右下向き -->
   <g transform="translate(420, 75)">
     <line x1="0" y1="0" x2="40" y2="10" stroke="#3498DB" stroke-width="2"/>
-    <polygon points="40,10 32,4 36,16" fill="#3498DB"/>
+    <polygon points="40,10 32,2 30,16" fill="#3498DB"/>
   </g>
   
   <!-- 矢印5: 右下向き -->
   <g transform="translate(540, 75)">
     <line x1="0" y1="0" x2="35" y2="25" stroke="#3498DB" stroke-width="2"/>
-    <polygon points="35,25 29,16 40,18" fill="#3498DB"/>
+    <polygon points="35,25 28,10 20,24" fill="#3498DB"/>
   </g>
   
   <!-- 2行目の矢印 (5個) -->
   <!-- 矢印6: 右上向き -->
   <g transform="translate(60, 175)">
-    <line x1="0" y1="0" x2="30" y2="-30" stroke="#3498DB" stroke-width="2"/>
-    <polygon points="30,-30 23,-22 35,-22" fill="#3498DB"/>
+    <line x1="0" y1="20" x2="30" y2="-10" stroke="#3498DB" stroke-width="2"/>
+    <polygon points="30,-12 30,0 21,-10" fill="#3498DB"/>
   </g>
   
   <!-- 矢印7: ほぼ右向きだがやや下 -->
   <g transform="translate(180, 175)">
-    <line x1="0" y1="0" x2="43" y2="8" stroke="#3498DB" stroke-width="2"/>
-    <polygon points="43,8 33,4 36,14" fill="#3498DB"/>
+    <line x1="-10" y1="20" x2="43" y2="28" stroke="#3498DB" stroke-width="2"/>
+    <polygon points="43,28 38,20 36,34" fill="#3498DB"/>
   </g>
   
   <!-- 矢印8: 完全に右向き (平均方向に近い) -->
   <g transform="translate(300, 175)">
-    <line x1="0" y1="0" x2="45" y2="-3" stroke="#3498DB" stroke-width="2"/>
-    <polygon points="45,-3 35,-8 35,0" fill="#3498DB"/>
+    <line x1="0" y1="20" x2="45" y2="28" stroke="#3498DB" stroke-width="2"/>
+    <polygon points="45,28 35,20 35,34" fill="#3498DB"/>
   </g>
   
   <!-- 矢印9: 右上向き (やや強く) -->
   <g transform="translate(420, 175)">
-    <line x1="0" y1="0" x2="35" y2="-20" stroke="#3498DB" stroke-width="2"/>
-    <polygon points="35,-20 28,-12 40,-12" fill="#3498DB"/>
+    <line x1="0" y1="20" x2="35" y2="8" stroke="#3498DB" stroke-width="2"/>
+    <polygon points="35,8 28,20 26,3" fill="#3498DB"/>
   </g>
   
   <!-- 矢印10: 右向き (ほぼ平均方向) -->
   <g transform="translate(540, 175)">
-    <line x1="0" y1="0" x2="43" y2="2" stroke="#3498DB" stroke-width="2"/>
-    <polygon points="43,2 33,-2 33,6" fill="#3498DB"/>
+    <line x1="0" y1="20" x2="43" y2="22" stroke="#3498DB" stroke-width="2"/>
+    <polygon points="44,22 33,18 33,26" fill="#3498DB"/>
   </g>
   
 </svg>
